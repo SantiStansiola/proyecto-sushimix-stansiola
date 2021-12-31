@@ -1,0 +1,150 @@
+/*main*/
+
+main{
+    padding: 0 20px;
+    grid-area: main;
+    color:white;
+    background-color: black;
+    h1{
+        text-align: center;
+        margin: 20px;
+    }
+    .primer-caja {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        padding: 25px 0;
+        justify-content: center;
+        img{
+            width: 100%;
+            max-width: 100%;
+            height: 500px;
+        }
+        p{
+            line-height: 25px;
+            text-align: center;
+        }
+    }
+    h2{
+        text-align: center;
+    }
+    .segunda-caja {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding-top: 40px;
+        align-items: center;
+        color: white;
+    }
+}   
+
+/*Menu*/ 
+
+main{
+    h2 {
+        text-align: center;
+        margin: 30px;
+    }
+    .galeria-fotos {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+        padding: 30px 15px;
+        img{
+            width: 280px;
+            height: 220px;
+            padding: 10px;
+        
+        }
+    }
+}
+
+/*Pagina eventos y catering */
+
+.main-eventos {
+    padding: 20px 10px;
+    .seccion-eventos {
+        display: flex;
+        flex-direction: row;
+        p {
+            text-align: center;
+            align-self: center;
+        }
+        img {
+            width: 280px;
+            height: 250px;
+            padding: 10px 25px;
+        }
+    }
+}
+
+/*Nosotros*/
+
+main{
+    .contenedor-mapa {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 25px;
+        padding: 25px;
+        p {
+            text-align: start;
+            align-self: center;
+            grid-column: 1/2;
+            max-width: 100%;
+        }
+        iframe {
+            max-width: 100%;
+            grid-column: 2/2;
+            width: 100%;
+        } 
+    }
+}
+
+/* Contacto*/
+
+
+main{
+    .contenedor-forms {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        padding-bottom: 25px;
+        .contacto {
+            color: black;
+            width: 30%;
+            padding: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 6px 0 black;
+            margin: auto;
+            h4 {
+                text-align: center;
+                margin: 10px 0;
+            }
+            .elementos-forms {
+                margin: 45px;
+                input, textarea {
+                    color:black;
+                    font-size: 15px;
+                    padding: 10px 10px 10px 5px;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid black;
+                }
+            }
+            .button-forms{
+                button {
+                    display:block;
+                    width: 150px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    margin: 10px auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

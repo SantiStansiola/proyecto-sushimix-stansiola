@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif; }
+
+body {
+  background-color: black; }
+
+.contenedor-grid {
+  display: grid;
+  grid-template-areas: "nav " "header " "main " "footer "; }
+
+/*nav*/
+header {
+  grid-area: header; }
+  header .color-nav {
+    background-color: white; }
+    header .color-nav li {
+      transition: all .5s ease;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 18px; }
+      header .color-nav li:hover {
+        transform: scale(1.5); }
+      header .color-nav li a:hover {
+        text-decoration: underline red; }
+
+@keyframes entrada {
+  0% {
+    transform: translateX(300vh); }
+  100% {
+    transform: translateX(0vh); } }
+    header .color-nav .icono-nav img {
+      animation-name: entrada;
+      animation-duration: 2s;
+      animation-iteration-count: 1; }
+
+/*main*/
+main {
+  padding: 0 20px;
+  grid-area: main;
+  color: white;
+  background-color: black; }
+  main h1 {
+    text-align: center;
+    margin: 20px; }
+  main .primer-caja {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    padding: 25px 0;
+    justify-content: center; }
+    main .primer-caja img {
+      width: 100%;
+      max-width: 100%;
+      height: 500px; }
+    main .primer-caja p {
+      line-height: 25px;
+      text-align: center; }
+  main h2 {
+    text-align: center; }
+  main .segunda-caja {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    align-items: center;
+    color: white; }
+
+/*Menu*/
+main h2 {
+  text-align: center;
+  margin: 30px; }
+
+main .galeria-fotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 30px 15px; }
+  main .galeria-fotos img {
+    width: 280px;
+    height: 220px;
+    padding: 10px; }
+
+/*Pagina eventos y catering */
+.main-eventos {
+  padding: 20px 10px; }
+  .main-eventos .seccion-eventos {
+    display: flex;
+    flex-direction: row; }
+    .main-eventos .seccion-eventos p {
+      text-align: center;
+      align-self: center; }
+    .main-eventos .seccion-eventos img {
+      width: 280px;
+      height: 250px;
+      padding: 10px 25px; }
+
+/*Nosotros*/
+main .contenedor-mapa {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+  padding: 25px; }
+  main .contenedor-mapa p {
+    text-align: start;
+    align-self: center;
+    grid-column: 1/2;
+    max-width: 100%; }
+  main .contenedor-mapa iframe {
+    max-width: 100%;
+    grid-column: 2/2;
+    width: 100%; }
+
+/* Contacto*/
+main .contenedor-forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding-bottom: 25px; }
+  main .contenedor-forms .contacto {
+    color: black;
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 black;
+    margin: auto; }
+    main .contenedor-forms .contacto h4 {
+      text-align: center;
+      margin: 10px 0; }
+    main .contenedor-forms .contacto .elementos-forms {
+      margin: 45px; }
+      main .contenedor-forms .contacto .elementos-forms input, main .contenedor-forms .contacto .elementos-forms textarea {
+        color: black;
+        font-size: 15px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black; }
+    main .contenedor-forms .contacto .button-forms button {
+      display: block;
+      width: 150px;
+      height: 40px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      margin: 10px auto;
+      cursor: pointer; }
+
+/*footer*/
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background-color: black; }
+  footer .footer-ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    footer .footer-ul li {
+      display: inline-block;
+      transition: all .5s ease;
+      padding: 10px;
+      margin: 5px; }
+      footer .footer-ul li:hover {
+        transform: scale(1.5); }
+    footer .footer-ul img {
+      width: 35px;
+      height: 35px; }
+
+/*mediaqueries*/
+@media screen and (max-width: 768px) {
+  /*mediaquerie inicio*/
+  main {
+    grid-area: main;
+    color: white; }
+    main h2 {
+      text-align: center; }
+    main .primer-caja {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 15px;
+      text-align: center;
+      font-size: medium; }
+      main .primer-caja img {
+        padding: 15px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%; }
+      main .primer-caja p {
+        line-height: 20px;
+        font-size: 15px; }
+    main .segunda-caja {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-top: 25px;
+      align-items: center; }
+      main .segunda-caja table {
+        margin-top: 30px;
+        margin-bottom: 15px; }
+  footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px; }
+    footer .footer-ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      footer .footer-ul li {
+        display: inline-block;
+        padding: 10px;
+        margin: 5px; }
+      footer .footer-ul img {
+        width: 35px;
+        height: 35px; }
+  /*mediaquerie pagina eventos y catering */
+  .seccion-eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .seccion-eventos p {
+      font-size: 0.7em;
+      line-height: 1em;
+      text-align: center; }
+    .seccion-eventos img {
+      width: 200px;
+      height: 150px; }
+  /*mediaquerie pagina menu*/
+  main .galeria-fotos {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 20px 10px; }
+    main .galeria-fotos img {
+      width: 200px;
+      height: 150px;
+      padding: 20px; }
+  /*mediaquerie pagina nosotros*/
+  .contenedor-mapa {
+    display: none;
+    display: flex;
+    flex-direction: column; }
+  /*mediaquerie pagina contacto*/
+  .contacto {
+    width: 60%; } }
