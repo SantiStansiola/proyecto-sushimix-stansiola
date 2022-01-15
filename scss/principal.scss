@@ -14,8 +14,8 @@ body{
     grid-template-areas: "nav ""header ""main ""footer ";
 }
 
+@import"variables";
 @import"nav";
 @import"main";
 @import"footer";
 @import"mediaquerie";
-@import"variables";

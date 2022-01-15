@@ -11,6 +11,7 @@ body {
   display: grid;
   grid-template-areas: "nav " "header " "main " "footer "; }
 
+/*maps*/
 /*nav*/
 header {
   grid-area: header; }
@@ -153,24 +154,37 @@ main .contenedor-forms {
 /*footer*/
 footer {
   grid-area: footer;
-  text-align: center;
-  padding: 20px;
-  color: white;
-  background-color: black; }
+  text-align: center; }
+  footer .contenedor-mini, footer .footer-ul .contenedor-hipermini {
+    color: white;
+    background-color: black;
+    padding: 50px; }
   footer .footer-ul {
     display: flex;
     justify-content: space-around;
-    align-items: center; }
-    footer .footer-ul li {
-      display: inline-block;
-      transition: all .5s ease;
-      padding: 10px;
-      margin: 5px; }
-      footer .footer-ul li:hover {
-        transform: scale(1.5); }
-    footer .footer-ul img {
-      width: 35px;
-      height: 35px; }
+    align-items: center;
+    margin: 2em;
+    /*li{
+            display: inline-block;
+            transition: all .5s ease;
+            padding: 10px;
+            margin: 5px;
+            &:hover{
+                transform: scale(1.5);
+            }
+        }
+        img{
+            width: 35px;
+            height: 35px;
+        } */ }
+    footer .footer-ul .colores-colores {
+      background-color: red; }
+    footer .footer-ul .colores-colores {
+      background-color: green; }
+    footer .footer-ul .colores-colores {
+      background-color: pink; }
+    footer .footer-ul .contenedor-hipermini {
+      color: burlywood; }
 
 /*mediaqueries*/
 @media screen and (max-width: 768px) {
